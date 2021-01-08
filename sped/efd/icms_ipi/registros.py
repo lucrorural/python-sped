@@ -128,7 +128,7 @@ class Registro0175(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', '0175'),
-        Campo(2, 'DT_ALT'),
+        CampoData(2, 'DT_ALT'),
         Campo(3, 'NR_CAMPO'),
         Campo(4, 'CONT_ANT'),
     ]
@@ -187,7 +187,7 @@ class Registro0206(Registro):
         CampoFixo(1, 'REG', '0206'),
         Campo(2, 'COD_COMB'),
     ]
-    
+
 
 class Registro0210(Registro):
     """
@@ -278,7 +278,7 @@ class Registro0500(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', '0500'),
-        Campo(2, 'DT_ALT'),
+        CampoData(2, 'DT_ALT'),
         Campo(3, 'COD_NAT_CC'),
         Campo(4, 'IND_CTA'),
         Campo(5, 'NÍVEL'),
@@ -293,7 +293,7 @@ class Registro0600(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', '0600'),
-        Campo(2, 'DT_ALT'),
+        CampoData(2, 'DT_ALT'),
         Campo(3, 'COD_CCUS'),
         Campo(4, 'CCUS'),
     ]
@@ -434,8 +434,8 @@ class RegistroC112(Registro):
         Campo(4, 'NUM_DA'),
         Campo(5, 'COD_AUT'),
         Campo(6, 'VL_DA'),
-        Campo(7, 'DT_VCTO'),
-        Campo(8, 'DT_PGTO'),
+        CampoData(7, 'DT_VCTO'),
+        CampoData(8, 'DT_PGTO'),
     ]
 
 
@@ -452,7 +452,8 @@ class RegistroC113(Registro):
         Campo(6, 'SER'),
         Campo(7, 'SUB'),
         Campo(8, 'NUM_DOC'),
-        Campo(9, 'DT_DOC'),
+        CampoData(9, 'DT_DOC'),
+        Campo(10, 'CHV_DOCe'),
     ]
 
 
@@ -466,7 +467,7 @@ class RegistroC114(Registro):
         Campo(3, 'ECF_FAB'),
         Campo(4, 'ECF_CX'),
         Campo(5, 'NUM_DOC'),
-        Campo(6, 'DT_DOC'),
+        CampoData(6, 'DT_DOC'),
     ]
 
 
@@ -498,7 +499,7 @@ class RegistroC116(Registro):
         Campo(3, 'NR_SAT'),
         Campo(4, 'CHV_CFE'),
         Campo(5, 'NUM_CFE'),
-        Campo(6, 'DT_DOC'),
+        CampoData(6, 'DT_DOC'),
     ]
 
 
@@ -554,7 +555,7 @@ class RegistroC141(Registro):
     campos = [
         CampoFixo(1, 'REG', 'C141'),
         Campo(2, 'NUM_PARC'),
-        Campo(3, 'DT_VCTO'),
+        CampoData(3, 'DT_VCTO'),
         Campo(4, 'VL_PARC'),
     ]
 
@@ -672,8 +673,8 @@ class RegistroC173(Registro):
         CampoFixo(1, 'REG', 'C173'),
         Campo(2, 'LOTE_MED'),
         Campo(3, 'QTD_ITEM'),
-        Campo(4, 'DT_FAB'),
-        Campo(5, 'DT_VAL'),
+        CampoData(4, 'DT_FAB'),
+        CampoData(5, 'DT_VAL'),
         Campo(6, 'IND_MED'),
         Campo(7, 'TP_PROD'),
         Campo(8, 'VL_TAB_MAX'),
@@ -714,7 +715,7 @@ class RegistroC176(Registro):
         Campo(2, 'COD_MOD_ULT_E'),
         Campo(3, 'NUM_DOC_ULT_E'),
         Campo(4, 'SER_ULT_E'),
-        Campo(5, 'DT_ULT_E'),
+        CampoData(5, 'DT_ULT_E'),
         Campo(6, 'COD_PART_ULT_E'),
         Campo(7, 'QUANT_ULT_E'),
         Campo(8, 'VL_UNIT_ULT_E'),
@@ -830,7 +831,7 @@ class RegistroC300(Registro):
         Campo(4, 'SUB'),
         Campo(5, 'NUM_DOC_INI'),
         Campo(6, 'NUM_DOC_FIN'),
-        Campo(7, 'DT_DOC'),
+        CampoData(7, 'DT_DOC'),
         Campo(8, 'VL_DOC'),
         Campo(9, 'VL_PIS'),
         Campo(10, 'VL_COFINS'),
@@ -892,7 +893,7 @@ class RegistroC350(Registro):
         Campo(2, 'SER'),
         Campo(3, 'SUB_SER'),
         Campo(4, 'NUM_DOC'),
-        Campo(5, 'DT_DOC'),
+        CampoData(5, 'DT_DOC'),
         Campo(6, 'CNPJ_CPF'),
         Campo(7, 'VL_MERC'),
         Campo(8, 'VL_DOC'),
@@ -953,7 +954,7 @@ class RegistroC405(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', 'C405'),
-        Campo(2, 'DT_DOC'),
+        CampoData(2, 'DT_DOC'),
         Campo(3, 'CRO'),
         Campo(4, 'CRZ'),
         Campo(5, 'NUM_COO_FIN'),
@@ -1010,7 +1011,7 @@ class RegistroC460(Registro):
         Campo(2, 'COD_MOD'),
         Campo(3, 'COD_SIT'),
         Campo(4, 'NUM_DOC'),
-        Campo(5, 'DT_DOC'),
+        CampoData(5, 'DT_DOC'),
         Campo(6, 'VL_DOC'),
         Campo(7, 'VL_PIS'),
         Campo(8, 'VL_COFINS'),
@@ -1094,21 +1095,21 @@ class RegistroC500(Registro):
         Campo(8, 'SUB'),
         Campo(9, 'COD_CONS'),
         Campo(10, 'NUM_DOC'),
-        Campo(11, 'DT_DOC'),
-        Campo(12, 'DT_E_S'),
-        Campo(13, 'VL_DOC'),
-        Campo(14, 'VL_DESC'),
-        Campo(15, 'VL_FORN'),
-        Campo(16, 'VL_SERV_NT'),
-        Campo(17, 'VL_TERC'),
-        Campo(18, 'VL_DA'),
-        Campo(19, 'VL_BC_ICMS'),
-        Campo(20, 'VL_ICMS'),
-        Campo(21, 'VL_BC_ICMS_ST'),
-        Campo(22, 'VL_ICMS_ST'),
+        CampoData(11, 'DT_DOC'),
+        CampoData(12, 'DT_E_S'),
+        CampoNumerico(13, 'VL_DOC'),
+        CampoNumerico(14, 'VL_DESC'),
+        CampoNumerico(15, 'VL_FORN'),
+        CampoNumerico(16, 'VL_SERV_NT'),
+        CampoNumerico(17, 'VL_TERC'),
+        CampoNumerico(18, 'VL_DA'),
+        CampoNumerico(19, 'VL_BC_ICMS'),
+        CampoNumerico(20, 'VL_ICMS'),
+        CampoNumerico(21, 'VL_BC_ICMS_ST'),
+        CampoNumerico(22, 'VL_ICMS_ST'),
         Campo(23, 'COD_INF'),
-        Campo(24, 'VL_PIS'),
-        Campo(25, 'VL_COFINS'),
+        CampoNumerico(24, 'VL_PIS'),
+        CampoNumerico(25, 'VL_COFINS'),
         Campo(26, 'TP_LIGACAO'),
         Campo(27, 'COD_GRUPO_TENSAO'),
         Campo(28, 'CHV_DOCe'),
@@ -1158,13 +1159,13 @@ class RegistroC590(Registro):
         CampoFixo(1, 'REG', 'C590'),
         Campo(2, 'CST_ICMS'),
         Campo(3, 'CFOP'),
-        Campo(4, 'ALIQ_ICMS'),
-        Campo(5, 'VL_OPR'),
-        Campo(6, 'VL_BC_ICMS'),
-        Campo(7, 'VL_ICMS'),
-        Campo(8, 'VL_BC_ICMS_ST'),
-        Campo(9, 'VL_ICMS_ST'),
-        Campo(10, 'VL_RED_BC'),
+        CampoNumerico(4, 'ALIQ_ICMS'),
+        CampoNumerico(5, 'VL_OPR'),
+        CampoNumerico(6, 'VL_BC_ICMS'),
+        CampoNumerico(7, 'VL_ICMS'),
+        CampoNumerico(8, 'VL_BC_ICMS_ST'),
+        CampoNumerico(9, 'VL_ICMS_ST'),
+        CampoNumerico(10, 'VL_RED_BC'),
         Campo(11, 'COD_OBS'),
     ]
 
@@ -1183,7 +1184,7 @@ class RegistroC600(Registro):
         Campo(6, 'COD_CONS'),
         Campo(7, 'QTD_CONS'),
         Campo(8, 'QTD_CANC'),
-        Campo(9, 'DT_DOC'),
+        CampoData(9, 'DT_DOC'),
         Campo(10, 'VL_DOC'),
         Campo(11, 'VL_DESC'),
         Campo(12, 'CONS'),
@@ -1268,8 +1269,8 @@ class RegistroC700(Registro):
         Campo(3, 'SER'),
         Campo(4, 'NRO_ORD_INI'),
         Campo(5, 'NRO_ORD_FIN'),
-        Campo(6, 'DT_DOC_INI'),
-        Campo(7, 'DT_DOC_FIN'),
+        CampoData(6, 'DT_DOC_INI'),
+        CampoData(7, 'DT_DOC_FIN'),
         Campo(8, 'NOM_MEST'),
     ]
 
@@ -1314,7 +1315,7 @@ class RegistroC800(Registro):
         Campo(2, 'COD_MOD'),
         Campo(3, 'COD_SIT'),
         Campo(4, 'NUM_CFE'),
-        Campo(5, 'DT_DOC'),
+        CampoData(5, 'DT_DOC'),
         Campo(6, 'VL_CFE'),
         Campo(7, 'VL_PIS'),
         Campo(8, 'VL_COFINS'),
@@ -1354,7 +1355,7 @@ class RegistroC860(Registro):
         CampoFixo(1, 'REG', 'C860'),
         Campo(2, 'COD_MOD'),
         Campo(3, 'NR_SAT'),
-        Campo(4, 'DT_DOC'),
+        CampoData(4, 'DT_DOC'),
         Campo(5, 'DOC_INI'),
         Campo(6, 'DOC_FIM'),
     ]
@@ -1562,7 +1563,7 @@ class RegistroD162(Registro):
         Campo(2, 'COD_MOD'),
         Campo(3, 'SER'),
         Campo(4, 'NUM_DOC'),
-        Campo(5, 'DT_DOC'),
+        CampoData(5, 'DT_DOC'),
         Campo(6, 'VL_DOC'),
         Campo(7, 'VL_MERC'),
         Campo(8, 'QTD_VOL'),
@@ -1613,7 +1614,7 @@ class RegistroD180(Registro):
         Campo(13, 'SER'),
         Campo(14, 'SUB'),
         Campo(15, 'NUM_DOC'),
-        Campo(16, 'DT_DOC'),
+        CampoData(16, 'DT_DOC'),
         Campo(17, 'VL_DOC'),
     ]
 
@@ -1677,7 +1678,7 @@ class RegistroD300(Registro):
         Campo(7, 'CST_ICMS'),
         Campo(8, 'CFOP'),
         Campo(9, 'ALIQ_ICMS'),
-        Campo(10, 'DT_DOC'),
+        CampoData(10, 'DT_DOC'),
         Campo(11, 'VL_OPR'),
         Campo(12, 'VL_DESC'),
         Campo(13, 'VL_SERV'),
@@ -1734,7 +1735,7 @@ class RegistroD355(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', 'D355'),
-        Campo(2, 'DT_DOC'),
+        CampoData(2, 'DT_DOC'),
         Campo(3, 'CRO'),
         Campo(4, 'CRZ'),
         Campo(5, 'NUM_COO_FIN'),
@@ -1812,7 +1813,7 @@ class RegistroD400(Registro):
         Campo(5, 'SER'),
         Campo(6, 'SUB'),
         Campo(7, 'NUM_DOC'),
-        Campo(8, 'DT_DOC'),
+        CampoData(8, 'DT_DOC'),
         Campo(9, 'VL_DOC'),
         Campo(10, 'VL_DESC'),
         Campo(11, 'VL_SERV'),
@@ -1835,7 +1836,7 @@ class RegistroD410(Registro):
         Campo(4, 'SUB'),
         Campo(5, 'NUM_DOC_INI'),
         Campo(6, 'NUM_DOC_FIN'),
-        Campo(7, 'DT_DOC'),
+        CampoData(7, 'DT_DOC'),
         Campo(8, 'CST_ICMS'),
         Campo(9, 'CFOP'),
         Campo(10, 'ALIQ_ICMS'),
@@ -1884,19 +1885,19 @@ class RegistroD500(Registro):
         Campo(7, 'SER'),
         Campo(8, 'SUB'),
         Campo(9, 'NUM_DOC'),
-        Campo(10, 'DT_DOC'),
-        Campo(11, 'DT_A_P'),
-        Campo(12, 'VL_DOC'),
-        Campo(13, 'VL_DESC'),
-        Campo(14, 'VL_SERV'),
-        Campo(15, 'VL_SERV_NT'),
-        Campo(16, 'VL_TERC'),
-        Campo(17, 'VL_DA'),
-        Campo(18, 'VL_BC_ICMS'),
-        Campo(19, 'VL_ICMS'),
+        CampoData(10, 'DT_DOC'),
+        CampoData(11, 'DT_A_P'),
+        CampoNumerico(12, 'VL_DOC'),
+        CampoNumerico(13, 'VL_DESC'),
+        CampoNumerico(14, 'VL_SERV'),
+        CampoNumerico(15, 'VL_SERV_NT'),
+        CampoNumerico(16, 'VL_TERC'),
+        CampoNumerico(17, 'VL_DA'),
+        CampoNumerico(18, 'VL_BC_ICMS'),
+        CampoNumerico(19, 'VL_ICMS'),
         Campo(20, 'COD_INF'),
-        Campo(21, 'VL_PIS'),
-        Campo(22, 'VL_COFINS'),
+        CampoNumerico(21, 'VL_PIS'),
+        CampoNumerico(22, 'VL_COFINS'),
         Campo(23, 'COD_CTA'),
         Campo(24, 'TP_ASSINANTE'),
     ]
@@ -1937,8 +1938,8 @@ class RegistroD530(Registro):
     campos = [
         CampoFixo(1, 'REG', 'D530'),
         Campo(2, 'IND_SERV'),
-        Campo(3, 'DT_INI_SERV'),
-        Campo(4, 'DT_FIN_SERV'),
+        CampoData(3, 'DT_INI_SERV'),
+        CampoData(4, 'DT_FIN_SERV'),
         Campo(5, 'PER_FISCAL'),
         Campo(6, 'COD_AREA'),
         Campo(7, 'TERMINAL'),
@@ -1977,7 +1978,7 @@ class RegistroD600(Registro):
         Campo(5, 'SUB'),
         Campo(6, 'COD_CONS'),
         Campo(7, 'QTD_CONS'),
-        Campo(8, 'DT_DOC'),
+        CampoData(8, 'DT_DOC'),
         Campo(9, 'VL_DOC'),
         Campo(10, 'VL_DESC'),
         Campo(11, 'VL_SERV'),
@@ -2047,8 +2048,8 @@ class RegistroD695(Registro):
         Campo(3, 'SER'),
         Campo(4, 'NRO_ORD_INI'),
         Campo(5, 'NRO_ORD_FIN'),
-        Campo(6, 'DT_DOC_INI'),
-        Campo(7, 'DT_DOC_FIN'),
+        CampoData(6, 'DT_DOC_INI'),
+        CampoData(7, 'DT_DOC_FIN'),
         Campo(8, 'NOM_MEST'),
     ]
 
@@ -2147,7 +2148,7 @@ class RegistroE111(Registro):
         CampoFixo(1, 'REG', 'E111'),
         Campo(2, 'COD_AJ_APUR'),
         Campo(3, 'DESCR_COMPL_AJ'),
-        Campo(4, 'VL_AJ_APUR'),
+        CampoNumerico(4, 'VL_AJ_APUR'),
     ]
 
 
@@ -2176,7 +2177,7 @@ class RegistroE113(Registro):
         Campo(4, 'SER'),
         Campo(5, 'SUB'),
         Campo(6, 'NUM_DOC'),
-        Campo(7, 'DT_DOC'),
+        CampoData(7, 'DT_DOC'),
         Campo(8, 'COD_ITEM'),
         Campo(9, 'VL_AJ_ITEM'),
     ]
@@ -2285,7 +2286,7 @@ class RegistroE240(Registro):
         Campo(4, 'SER'),
         Campo(5, 'SUB'),
         Campo(6, 'NUM_DOC'),
-        Campo(7, 'DT_DOC'),
+        CampoData(7, 'DT_DOC'),
         Campo(8, 'COD_ITEM'),
         CampoNumerico(9, 'VL_AJ_ITEM', precisao=2),
     ]
@@ -2299,7 +2300,7 @@ class RegistroE250(Registro):
         CampoFixo(1, 'REG', 'E250'),
         Campo(2, 'COD_OR'),
         CampoNumerico(3, 'VL_OR', precisao=2),
-        Campo(4, 'DT_VCTO'),
+        CampoData(4, 'DT_VCTO'),
         Campo(5, 'COD_REC'),
         Campo(6, 'NUM_PROC'),
         Campo(7, 'IND_PROC'),
@@ -2353,6 +2354,7 @@ class RegistroE310(Registro):
         CampoNumerico(22, 'DEB_ESP_FCP', precisao=2),
     ]
 
+
 class RegistroE316(Registro):
     """
     OBRIGAÇÕES RECOLHIDAS OU A RECOLHER – FUNDO DE
@@ -2363,7 +2365,7 @@ class RegistroE316(Registro):
         CampoFixo(1, 'REG', 'E316'),
         Campo(2, 'COD_OR'),
         CampoNumerico(3, 'VL_OR', precisao=2),
-        Campo(4, 'DT_VCTO'),
+        CampoData(4, 'DT_VCTO'),
         Campo(5, 'COD_REC'),
         Campo(6, 'NUM_PROC'),
         Campo(7, 'IND_PROC'),
@@ -2475,7 +2477,7 @@ class RegistroG125(Registro):
     campos = [
         CampoFixo(1, 'REG', 'G125'),
         Campo(2, 'COD_IND_BEM'),
-        Campo(3, 'DT_MOV'),
+        CampoData(3, 'DT_MOV'),
         Campo(4, 'TIPO_MOV'),
         Campo(5, 'VL_IMOB_ICMS_OP'),
         Campo(6, 'VL_IMOB_ICMS_ST'),
@@ -2515,7 +2517,7 @@ class RegistroG130(Registro):
         Campo(5, 'SERIE'),
         Campo(6, 'NUM_DOC'),
         Campo(7, 'CHV_NFE_CTE'),
-        Campo(8, 'DT_DOC'),
+        CampoData(8, 'DT_DOC'),
     ]
 
 
@@ -2753,13 +2755,13 @@ class Registro1100(Registro):
         CampoFixo(1, 'REG', '1100'),
         Campo(2, 'IND_DOC'),
         Campo(3, 'NRO_DE'),
-        Campo(4, 'DT_DE'),
+        CampoData(4, 'DT_DE'),
         Campo(5, 'NAT_EXP'),
         Campo(6, 'NRO_RE'),
-        Campo(7, 'DT_RE'),
+        CampoData(7, 'DT_RE'),
         Campo(8, 'CHC_EMB'),
-        Campo(9, 'DT_CHC'),
-        Campo(10, 'DT_AVB'),
+        CampoData(9, 'DT_CHC'),
+        CampoData(10, 'DT_AVB'),
         Campo(11, 'TP_CHC'),
         Campo(12, 'PAIS'),
     ]
@@ -2775,7 +2777,7 @@ class Registro1105(Registro):
         Campo(3, 'SERIE'),
         Campo(4, 'NUM_DOC'),
         Campo(5, 'CHV_NFE'),
-        Campo(6, 'DT_DOC'),
+        CampoData(6, 'DT_DOC'),
         Campo(7, 'COD_ITEM'),
     ]
 
@@ -2790,7 +2792,7 @@ class Registro1110(Registro):
         Campo(3, 'COD_MOD'),
         Campo(4, 'SER'),
         Campo(5, 'NUM_DOC'),
-        Campo(6, 'DT_DOC'),
+        CampoData(6, 'DT_DOC'),
         Campo(7, 'CHV_NFE'),
         Campo(8, 'NR_ MEMO'),
         Campo(9, 'QTD'),
@@ -2831,7 +2833,7 @@ class Registro1300(Registro):
     campos = [
         CampoFixo(1, 'REG', '1300'),
         Campo(2, 'COD_ITEM'),
-        Campo(3, 'DT_FECH'),
+        CampoData(3, 'DT_FECH'),
         Campo(4, 'ESTQ_ABERT'),
         Campo(5, 'VOL_ENTR'),
         Campo(6, 'VOL_DISP'),
@@ -2900,7 +2902,7 @@ class Registro1360(Registro):
     campos = [
         CampoFixo(1, 'REG', '1360'),
         Campo(2, 'NUM_LACRE'),
-        Campo(3, 'DT_APLICACAO'),
+        CampoData(3, 'DT_APLICACAO'),
     ]
 
 
@@ -2932,7 +2934,7 @@ class Registro1391(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', '1391'),
-        Campo(2, 'DT_REGISTRO'),
+        CampoData(2, 'DT_REGISTRO'),
         Campo(3, 'QTD_MOID'),
         Campo(4, 'ESTQ_INI'),
         Campo(5, 'QTD_PRODUZ'),
@@ -2978,8 +2980,8 @@ class Registro1500(Registro):
         Campo(8, 'SUB'),
         Campo(9, 'COD_CONS'),
         Campo(10, 'NUM_DOC'),
-        Campo(11, 'DT_DOC'),
-        Campo(12, 'DT_E_S'),
+        CampoData(11, 'DT_DOC'),
+        CampoData(12, 'DT_E_S'),
         Campo(13, 'VL_DOC'),
         Campo(14, 'VL_DESC'),
         Campo(15, 'VL_FORN'),
@@ -3163,7 +3165,7 @@ class Registro1923(Registro):
         Campo(4, 'SER'),
         Campo(5, 'SUB'),
         Campo(6, 'NUM_DOC'),
-        Campo(7, 'DT_DOC'),
+        CampoData(7, 'DT_DOC'),
         Campo(8, 'COD_ITEM'),
         Campo(9, 'VL_AJ_ITEM'),
     ]
@@ -3189,7 +3191,7 @@ class Registro1926(Registro):
         CampoFixo(1, 'REG', '1926'),
         Campo(2, 'COD_OR'),
         Campo(3, 'VL_OR'),
-        Campo(4, 'DT_VCTO'),
+        CampoData(4, 'DT_VCTO'),
         Campo(5, 'COD_REC'),
         Campo(6, 'NUM_PROC'),
         Campo(7, 'IND_PROC'),
