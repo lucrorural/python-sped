@@ -53,9 +53,9 @@ class ArquivoDigital(object):
             for registro in bloco.registros:
                 buff.write(registro.as_line() + u'\r\n')
 
-        self._registro_encerramento[2] = reg_count
-
-        buff.write(self._registro_encerramento.as_line() + u'\r\n')
+        if self.__class__.__module__ != "sped.lcdpr.arquivos":
+            self._registro_encerramento[2] = reg_count
+            buff.write(self._registro_encerramento.as_line() + u'\r\n')
 
     def getstring(self):
         buff = StringIO()
