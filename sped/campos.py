@@ -2,14 +2,10 @@
 
 
 import re
-
-from datetime import date
-from datetime import datetime
+from datetime import date, datetime
 from decimal import Decimal
 
-from .erros import CampoFixoError
-from .erros import CampoObrigatorioError
-from .erros import FormatoInvalidoError
+from .erros import CampoFixoError, CampoObrigatorioError, FormatoInvalidoError
 
 
 class Campo(object):
@@ -141,7 +137,7 @@ class CampoNumerico(Campo):
     def __init__(self, indice, nome, obrigatorio=False,
                  precisao=None, minimo=0, maximo=1000):
         super().__init__(indice, nome, obrigatorio)
-        self._precisao = precisao if precisao is not None else 0
+        self._precisao = precisao if precisao is not None else 2
         self._minimo = minimo
         self._maximo = maximo
 
