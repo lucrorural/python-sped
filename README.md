@@ -5,8 +5,6 @@
 
 Biblioteca para geração dos arquivos do Sistema Público de Escrituração Digital (SPED) para Python.
 
-> This software is coded and documented in portuguese only as it is intended to be used to generate the necessary files for the brazilian government regarding to digital bookkeeping.
-
 ## Requisitos
 
   * python
