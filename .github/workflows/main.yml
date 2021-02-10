@@ -1,16 +1,8 @@
 name: python-sped app
-
-on:
-  push:
-    branches: [ $default-branch ]
-  pull_request:
-    branches: [ $default-branch ]
-
+on: pull_request
 jobs:
-  build:
-
+  run:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.7
