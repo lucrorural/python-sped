@@ -47,38 +47,4 @@ O projeto está em fase inicial de desenvolvimento e **não deve** ser usado em 
 | EFD-PIS/COFINS |   Funcional   |
 | EFD-ICMS/IPI   |   Funcional   |
 | FCI            |   Funcional   |
-
-### ECD
-
-Este módulo está funcional, com todos seus registros codificados, porém muitos campos ainda não possuem uma validação
-adequada, consultado tabelas externas por exemplo, ou validando corretamente todos os tamanhos de campos.
-
-Ele pode ser usado para gerar um arquivo digital, com validações de abertura e fechamento de bloco automaticamente.
-
-### ECF
-
-Este módulo está funcional, com todos seus registros codificados, porém muitos campos ainda não possuem uma validação
-adequada, consultado tabelas externas por exemplo, ou validando corretamente todos os tamanhos de campos.
-
-Ele pode ser usado para gerar um arquivo digital, com validações de abertura e fechamento de bloco automaticamente.
-
-### EFD-ICMS/IPI
-
-Este módulo está funcional, com todos seus registros codificados, porém muitos campos ainda não possuem uma validação
-adequada, consultado tabelas externas por exemplo, ou validando corretamente todos os tamanhos de campos.
-
-Ele pode ser usado para gerar um arquivo digital, com validações de abertura e fechamento de bloco automaticamente.
-
-### EFD-PIS/COFINS
-
-Este módulo está funcional, com todos seus registros codificados, porém muitos campos ainda não possuem uma validação
-adequada, consultado tabelas externas por exemplo, ou validando corretamente todos os tamanhos de campos.
-
-Ele pode ser usado para gerar um arquivo digital, com validações de abertura e fechamento de bloco automaticamente.
-
-### FCI
-
-Este módulo está funcional, com todos seus registros codificados, porém muitos campos ainda não possuem uma validação
-adequada, validando corretamente todos os tamanhos de campos.
-
-Ele pode ser usado para gerar um arquivo digital, com validações de abertura e fechamento de bloco automaticamente.
+| LCDPR          |   Funcional   |

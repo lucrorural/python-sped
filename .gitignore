@@ -45,4 +45,6 @@ build/
 
 
 .env/
+.venv/
 /.pytest_cache/
+./python_sped.egg-info

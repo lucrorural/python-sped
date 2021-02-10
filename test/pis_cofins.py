@@ -43,7 +43,7 @@ class TestSpedPisCofins(unittest.TestCase):
         self.maxDiff = None
         arq = ArquivoDigital()
 
-        arq._registro_abertura.COD_VER = '010'
+        arq._registro_abertura.COD_VER = '01'
         arq._registro_abertura.COD_FIN = '0'
         arq._registro_abertura.DT_INI = '01102016'
         arq._registro_abertura.DT_FIN = '30102016'
