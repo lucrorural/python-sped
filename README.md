@@ -38,8 +38,6 @@ Contribuições são bem vindas ao projeto, exemplos de como você pode contribu
 
 ## Status do Projeto
 
-O projeto está em fase inicial de desenvolvimento e **não deve** ser usado em produção.
-
 | Módulo         |     Status    |
 |----------------|:-------------:|
 | ECD            |   Funcional   |
