@@ -5,11 +5,6 @@
 
 Biblioteca para geração dos arquivos do Sistema Público de Escrituração Digital (SPED) para Python.
 
-## Requisitos
-
-  * python
-  * six
-
 ## Como instalar
 
     $ pip install python-sped
@@ -29,10 +24,11 @@ Outras linguagens de programação poderão ter versões especificas conforme mi
 ## Contribuições para o Projeto
 
 Contribuições são bem vindas ao projeto, exemplos de como você pode contribuir:
- * usando o projeto e [apontando bugs](https://github.com/sped-br/python-sped/issues)
- * [sugestões de melhoria](https://github.com/sped-br/python-sped/issues)
- * enviando [pull requests](https://github.com/sped-br/python-sped/pulls)
- * auxiliando na [documentação](https://github.com/sped-br/python-sped/wiki)
+ * Usando o projeto e [apontando bugs](https://github.com/lucrorural/python-sped/issues)
+ * [Sugestões de melhoria](https://github.com/lucrorural/python-sped/issues)
+ * Enviando [pull requests](https://github.com/lucrorural/python-sped/pulls)
+ * Auxiliando na [documentação](https://github.com/lucrorural/python-sped/wiki)
+ * [Discutindo](https://github.com/lucrorural/python-sped/discussions) sobre o projeto
 
 ## Status do Projeto
 
