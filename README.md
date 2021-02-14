@@ -1,7 +1,7 @@
 # SPED para python
 
-[![Build Status](https://travis-ci.org/Trust-Code/python-sped.svg?branch=11.0)](https://travis-ci.org/Trust-Code/python-sped)
-[![Coverage Status](https://coveralls.io/repos/github/Trust-Code/python-sped/badge.svg?branch=11.0)](https://coveralls.io/github/Trust-Code/python-sped?branch=11.0)
+![Build Status](https://github.com/lucrorural/python-sped/workflows/python-sped%20app/badge.svg)
+
 
 Biblioteca para geração dos arquivos do Sistema Público de Escrituração Digital (SPED) para Python.
 
