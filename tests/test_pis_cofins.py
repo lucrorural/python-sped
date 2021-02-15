@@ -18,9 +18,9 @@ from sped.efd.icms_ipi.registros import Registro0100
 class TestSpedPisCofins():
 
     def test_read_registro(self):
-        txt = u"""|0000|01|0|01012020|31122020|KMEE INFORMATICA LTDA|53.939.351/0001-29|333.333.333-33|SP|222.222.222.222|1234567|5999|0123|A|1|
+        txt = u"""|0000|014|0|01012020|31122020|EMPRESA TESTE|53939351000129|33333333333|SP|222222222222|1234567|5999|0123|A|1|
 |0001|0|
-|0100|Daniel Sadamo|12334532212|532212|||Rua dos ferroviario|123|Agonia||||||
+|0100|CONTABILIDADE|99999999999|MT00000000||78000000|AV. UM|1||CENTRO|6599999999||contato@lucrorural.com.br|5102637|
 |0990|4|
 |B001|1|
 |B990|2|
@@ -71,15 +71,15 @@ class TestSpedPisCofins():
         self.maxDiff = None
         arq = ArquivoDigital()
 
-        arq._registro_abertura.COD_VER = '01'
+        arq._registro_abertura.COD_VER = '014'
         arq._registro_abertura.COD_FIN = '0'
         arq._registro_abertura.DT_INI = date(2020, 1, 1)
         arq._registro_abertura.DT_FIN = date(2020, 12, 31)
-        arq._registro_abertura.NOME = 'KMEE INFORMATICA LTDA'
-        arq._registro_abertura.CNPJ = '53.939.351/0001-29'
-        arq._registro_abertura.CPF = '333.333.333-33'
+        arq._registro_abertura.NOME = 'EMPRESA TESTE'
+        arq._registro_abertura.CNPJ = '53939351000129'
+        arq._registro_abertura.CPF = '33333333333'
         arq._registro_abertura.UF = 'SP'
-        arq._registro_abertura.IE = '222.222.222.222'
+        arq._registro_abertura.IE = '222222222222'
         arq._registro_abertura.COD_MUN = '1234567'
         arq._registro_abertura.IM = '5999'
         arq._registro_abertura.SUFRAMA = '0123'
@@ -87,13 +87,18 @@ class TestSpedPisCofins():
         arq._registro_abertura.IND_ATIV = '1'
 
         contabilista = Registro0100()
-        contabilista.NOME = 'Daniel Sadamo'
-        contabilista.CPF = '12334532212'
-        contabilista.CRC = '532212'
-        contabilista.END = 'Rua dos ferroviario'
-        contabilista.NUM = '123'
-        contabilista.COMPL = 'Agonia'
-
+        contabilista.NOME = 'CONTABILIDADE'
+        contabilista.CPF = '99999999999'
+        contabilista.CRC = 'MT00000000'
+        contabilista.CEP = '78000000'
+        contabilista.END = 'AV. UM'
+        contabilista.NUM = '1'
+        contabilista.COMPL = ''
+        contabilista.BAIRRO = 'CENTRO'
+        contabilista.FONE = '6599999999'
+        contabilista.FAX = ''
+        contabilista.EMAIL = 'contato@lucrorural.com.br'
+        contabilista.COD_MUN = '5102637'
         arq._blocos['0'].add(contabilista)
 
         arq.prepare()
