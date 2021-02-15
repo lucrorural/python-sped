@@ -82,10 +82,10 @@ class Registro0045(Registro):
     campos = [
         CampoFixo(1, 'REG', '0045'),
         Campo(2, 'COD_IMOVEL'),
-        CampoNumerico(3, 'TIPO_CONTRAPARTE'),
+        CampoNumerico(3, 'TIPO_CONTRAPARTE', precisao=0),
         Campo(4, 'ID_CONTRAPARTE'),
         Campo(5, 'NOME_CONTRAPARTE'),
-        CampoNumerico(6, 'PERC_CONTRAPARTE'),
+        CampoNumerico(6, 'PERC_CONTRAPARTE', precisao=2),
     ]
 
 
@@ -118,9 +118,9 @@ class RegistroQ100(Registro):
         Campo(7, 'HIST'),
         Campo(8, 'ID_PARTIC'),
         Campo(9, 'TIPO_LANC'),
-        CampoNumerico(10, 'VL_ENTRADA'),
-        CampoNumerico(11, 'VL_SAIDA'),
-        CampoNumerico(12, 'SLD_FIN'),
+        CampoNumerico(10, 'VL_ENTRADA', precisao=2),
+        CampoNumerico(11, 'VL_SAIDA', precisao=2),
+        CampoNumerico(12, 'SLD_FIN', precisao=2),
         Campo(13, 'NAT_SLD_FIN'),
     ]
 
