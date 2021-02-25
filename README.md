@@ -5,21 +5,44 @@
 
 Biblioteca para geração dos arquivos do Sistema Público de Escrituração Digital (SPED) para Python.
 
-## Como instalar
+## Instalação
 
-    $ pip install python-sped
+```sh
+$ pip install python-sped
+```
+
+## Desenvolvimento
+
+Criar seu ambiente virtual
+
+```sh
+$ virtualenv .venv
+$ source .venv/bin/activate
+```
+
+Instalar as dependências
+    
+```sh
+$ pip install -e .
+```
+
+## Testes
+    
+Execute
+    
+```sh
+$ make test
+```
 
 ## Objetivos do Projeto
 
-A ideia inicial do projeto e unificar em uma única biblioteca módulos para facilitar a geração dos arquivos do SPED, diminuido o retrabalho necessário para isso e tentando ao máximo garantir que o arquivo gerado seja considerado válido pelo validador do SPED.
+A ideia inicial do projeto é unificar em uma única biblioteca módulos para facilitar a geração dos arquivos do SPED, diminuido o retrabalho necessário para isso e tentando ao máximo garantir que o arquivo gerado seja considerado válido pelo validador do SPED.
 
 Não é objetivo deste projeto, remover a necessidade do programador em conhecer o SPED, bem como sua legislação e saber informar adequadamente todas as informações corretamente.
 
 ## Compatibilidade do Projeto
 
-O projeto inicialmente suportará apenas Python 3.4+, o suporte para Python 2.7 está em desenvolvimento. Pull requests que melhorem a compatibilidade são bem vindos.
-
-Outras linguagens de programação poderão ter versões especificas conforme minha disponibilidade de tempo.
+O projeto suportará Python 3.4+
 
 ## Contribuições para o Projeto
 
