@@ -28,7 +28,7 @@ class Registro0010(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', '0010'),
-        Campo(2, 'FORMA_APUR'),
+        CampoNumerico(2, 'FORMA_APUR', precisao=0),
     ]
 
 
@@ -112,7 +112,7 @@ class RegistroQ100(Registro):
         CampoFixo(1, 'REG', 'Q100'),
         CampoData(2, 'DATA'),
         Campo(3, 'COD_IMOVEL'),
-        CampoNumerico(4, 'COD_CONTA', precisao=0),
+        Campo(4, 'COD_CONTA'),
         Campo(5, 'NUM_DOC'),
         Campo(6, 'TIPO_DOC'),
         Campo(7, 'HIST'),
@@ -132,9 +132,9 @@ class RegistroQ200(Registro):
     campos = [
         CampoFixo(1, 'REG', 'Q200'),
         Campo(2, 'MES'),
-        CampoNumerico(3, 'VL_ENTRADA'),
-        CampoNumerico(4, 'VL_SAIDA'),
-        CampoNumerico(5, 'SLD_FIN'),
+        CampoNumerico(3, 'VL_ENTRADA', precisao=2),
+        CampoNumerico(4, 'VL_SAIDA', precisao=2),
+        CampoNumerico(5, 'SLD_FIN', precisao=2),
         Campo(6, 'NAT_SLD_FIN'),
     ]
 
@@ -150,5 +150,5 @@ class Registro9999(Registro):
         Campo(4, 'IND_CRC'),
         Campo(5, 'EMAIL'),
         Campo(6, 'FONE'),
-        CampoNumerico(7, 'QTD_LIN'),
+        CampoNumerico(7, 'QTD_LIN', precisao=0),
     ]
