@@ -43,7 +43,7 @@ build/
 .eggs/
 *.egg-info
 
-
+.vscode/
 .env/
 .venv/
 /.pytest_cache/
