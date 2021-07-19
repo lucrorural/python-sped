@@ -45,13 +45,19 @@ class ArquivoDigital(object):
             bloco.add(registro)
 
     def write_to(self, buff):
-        buff.write(self._registro_abertura.as_line() + u'\r\n')
+        if self.__class__.__module__ == "sped.lcdpr.arquivos":
+            buff.write(self._registro_abertura.as_line()[:-1] + u'\r\n')
+        else:
+            buff.write(self._registro_abertura.as_line() + u'\r\n')
         reg_count = 2
         for key in self._blocos.keys():
             bloco = self._blocos[key]
             reg_count += len(bloco.registros)
             for registro in bloco.registros:
-                buff.write(registro.as_line() + u'\r\n')
+                if self.__class__.__module__ == "sped.lcdpr.arquivos":
+                    buff.write(registro.as_line()[:-1] + u'\r\n')
+                else:
+                    buff.write(registro.as_line() + u'\r\n')
 
         if self.__class__.__module__ != "sped.lcdpr.arquivos":
             self._registro_encerramento[2] = reg_count

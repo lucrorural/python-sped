@@ -71,7 +71,7 @@ class Registro0040(Registro):
         Campo(14, 'COD_MUN'),
         Campo(15, 'CEP'),
         Campo(16, 'TIPO_EXPLORACAO'),
-        CampoNumerico(17, 'PARTICIPACAO'),
+        Campo(17, 'PARTICIPACAO'),
     ]
 
 
@@ -85,7 +85,7 @@ class Registro0045(Registro):
         CampoNumerico(3, 'TIPO_CONTRAPARTE', precisao=0),
         Campo(4, 'ID_CONTRAPARTE'),
         Campo(5, 'NOME_CONTRAPARTE'),
-        CampoNumerico(6, 'PERC_CONTRAPARTE', precisao=2),
+        Campo(6, 'PERC_CONTRAPARTE'),
     ]
 
 
@@ -95,7 +95,7 @@ class Registro0050(Registro):
     """
     campos = [
         CampoFixo(1, 'REG', '0050'),
-        CampoNumerico(2, 'COD_CONTA', precisao=0),
+        Campo(2, 'COD_CONTA'),
         Campo(3, 'PAIS_CTA'),
         Campo(4, 'BANCO'),
         Campo(5, 'NOME_BANCO'),
@@ -118,9 +118,9 @@ class RegistroQ100(Registro):
         Campo(7, 'HIST'),
         Campo(8, 'ID_PARTIC'),
         Campo(9, 'TIPO_LANC'),
-        CampoNumerico(10, 'VL_ENTRADA', precisao=2),
-        CampoNumerico(11, 'VL_SAIDA', precisao=2),
-        CampoNumerico(12, 'SLD_FIN', precisao=2),
+        Campo(10, 'VL_ENTRADA'),
+        Campo(11, 'VL_SAIDA'),
+        Campo(12, 'SLD_FIN'),
         Campo(13, 'NAT_SLD_FIN'),
     ]
 
@@ -132,9 +132,9 @@ class RegistroQ200(Registro):
     campos = [
         CampoFixo(1, 'REG', 'Q200'),
         Campo(2, 'MES'),
-        CampoNumerico(3, 'VL_ENTRADA', precisao=2),
-        CampoNumerico(4, 'VL_SAIDA', precisao=2),
-        CampoNumerico(5, 'SLD_FIN', precisao=2),
+        Campo(3, 'VL_ENTRADA'),
+        Campo(4, 'VL_SAIDA'),
+        Campo(5, 'SLD_FIN'),
         Campo(6, 'NAT_SLD_FIN'),
     ]
 
